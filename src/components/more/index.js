@@ -51,18 +51,7 @@ export default class More extends Component {
 
         {/* More */}
         <Content>
-          <List
-            dataArray={datas}
-            renderRow={data =>
-              <ListItem icon>
-                <Left>
-                  <Icon name={data.icon}/>
-                </Left>
-                <Body>
-                  <Text>{data.name}</Text>
-                </Body>
-              </ListItem>}
-          />
+          
         </Content>
 
         <AppFooter activeTab='tabMore' navigateTo={this.props.navigation} />
