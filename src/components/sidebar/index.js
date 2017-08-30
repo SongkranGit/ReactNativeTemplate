@@ -38,13 +38,7 @@ const datas = [
 		route: "LoginForm",
 		icon: "ios-log-in",
 		bg: "#C5F442",
-    },
-    {
-		name: "More Action",
-		route: "More",
-		icon: "more",
-		bg: "#C5F442",
-	},
+    }
 ];
 
 class SideBar extends Component {

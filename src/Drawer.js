@@ -15,8 +15,7 @@ const Drawer = DrawerNavigator(
   {
     Home: { screen: Home },
     LoginFacebook: { screen: LoginFacebook },
-    LoginForm: { screen: LoginForm },
-    More: { screen: More },
+    LoginForm: { screen: LoginForm }
   },
   {
     initialRouteName: "Home",
