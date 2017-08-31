@@ -6,10 +6,8 @@ import { Platform } from "react-native";
 import { Root } from "native-base";
 import { StackNavigator } from "react-navigation";
 
-import Drawer from "./Drawer";
-import Home from "./components/home";
-import LoginFacebook from "./components/login/loginFacebook";
-import LoginForm from "./components/login/loginForm";
+import Drawer from "./components/navigation/drawer";
+
 
 // For register navigator Drawer
 const AppNavigator = StackNavigator(

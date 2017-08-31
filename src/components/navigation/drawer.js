@@ -3,12 +3,13 @@
 import React from "react";
 import { DrawerNavigator } from "react-navigation";
 
-import Home from "./components/home";
-import LoginFacebook from "./components/login/loginFacebook";
-import LoginForm from "./components/login/loginForm";
-import More from "./components/more";
+// Containers
+import Home from "../../containers/home";
+import LoginFacebook from "../../containers/loginFacebook";
+import LoginForm from "../../containers/loginForm";
 
-import SideBar from "./components/sidebar";
+// Components
+import SideBar from "../sidebar";
 
 // For register navigator screen on Home/LoginFacebook/LoginForm/More including sidebar
 const Drawer = DrawerNavigator(
@@ -17,8 +18,8 @@ const Drawer = DrawerNavigator(
     LoginFacebook: { screen: LoginFacebook },
     LoginForm: { screen: LoginForm }
   },
-  {
-    initialRouteName: "Home",
+  { 
+    initialRouteName: "Home", 
     contentOptions: {
       activeTintColor: "#e91e63"
     },

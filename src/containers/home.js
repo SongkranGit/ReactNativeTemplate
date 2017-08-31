@@ -1,25 +1,28 @@
 import React, { Component } from 'react';
 import { Container, Content, Text } from 'native-base';
 
-import AppHeader from '../header';
-import AppFooter from '../footer';
+import AppHeader from '../components/header';
+import AppFooter from '../components/footer';
 import {
   AppRegistry,
   StyleSheet,
   View,
   Dimensions,
   Button,
-  NativeModules
-} from 'react-native';
+  NativeModules,
+  Image 
+} from 'react-native'; 
 
 // Progress bar 
-import ProgressBar from '../progressbar';
-//import ImageView from '../ImageView';
+import ProgressBar from '../components/progressbar';
+import toastAndroid from '../components/toastandroid';
+ 
+//var toastAndroid =  NativeModules.ToastAndroid;
 
 var toastAndroidTutorial = NativeModules.ToastAndroidTutorial;
 
 const styles = StyleSheet.create({
-  container: {
+  container: { 
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
@@ -48,8 +51,8 @@ const styles = StyleSheet.create({
 export default class Home extends Component {
     
   handleClick = () => {
-    //console.log('okkkkk')
-    toastAndroidTutorial.show('Awesome', 5000);
+   // toastAndroid.show('Awesome', 2000);
+    toastAndroidTutorial.show('Awesome My ToastAndroid', 2000);
   }
 
   
@@ -58,18 +61,24 @@ export default class Home extends Component {
      <Container>
         <AppHeader title='Home' navigateTo={this.props.navigation} />
 
-
         <View style={{flex: 1, flexDirection: 'column'}}>
-            <View style={{ flex: 1,}} >
-              <Text style={{ textAlign :'center', margin:20 }}    >
+            <View style={{ flex: 1,  
+                justifyContent: 'center',
+                alignItems: 'center',}} >
+              <Text style={{ textAlign :'center', marginTop:50}} >
                 Welcome to Native Module 
               </Text>
 
+              <Image
+                style={{width: 100, height: 100 , justifyContent: 'center', alignContent:'center' , marginTop:50}} 
+                source={{uri: 'https://facebook.github.io/react/img/logo_og.png'}}
+              />
               
             </View>
-            <View style={{ flex: 1,}} >
+            <View style={{ flex: 1 }} >
             <ProgressBar 
                     progress={0}
+                    marginTop= {50}
                     indeterminate={true}
                     style={styles.progressBar} />
             </View>

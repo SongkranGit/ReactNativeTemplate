@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { Container, Content, Button, Text, Form, Item, Input } from 'native-base';
 
-import AppHeader from '../header';
-import AppFooter from '../footer';
-
-export default class LoginFacebook extends Component {
+import AppHeader from '../components/header';
+import AppFooter from '../components/footer';
+ 
+export default class LoginForm extends Component {
   render() {
     return (
      <Container>
-        <AppHeader title='Login Facebook' navigateTo={this.props.navigation} />
+        <AppHeader title='Login Form' navigateTo={this.props.navigation} />
 
         {/* Login Form */}
         <Content padder>
@@ -26,7 +26,7 @@ export default class LoginFacebook extends Component {
           </Form>
         </Content>
 
-        <AppFooter activeTab='tabLoginFacebook' navigateTo={this.props.navigation} />
+        <AppFooter activeTab='tabLoginForm' navigateTo={this.props.navigation} />
       </Container>
     );
   }
